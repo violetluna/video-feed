@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+    <title> Video Feed Sample </title>
+
+    <!-- GoogleFont -->
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    
+
+  
+  </head>
+
+
+  <body>
+
+  	<h1>VIDEO FEED</h1>
+
+  	<!-- Results List -->
+    <div ng-app='myApp' ng-controller='myController'>
+      <div infinite-scroll='loadMore()'>
+  	     
+         <div id="results" ng-repeat='clip in clips | limitTo:limit'>
+   
+  		      <div class="card">
+  			      <ul class="list-group list-group-flush">
+    			      <li class="list-group-item name">{{ clip.title }}</li>
+    			      <li class="list-group-item video">
+              
+                  <div align="center" class="embed-responsive embed-responsive-16by9">
+                    <video controls class="embed-responsive-item">
+                      <source type="video/mp4" ng-src="{{clip.file}}">
+                    </video>
+                  </div>
+                </li>
+  			      </ul>
+		        </div>
+
+        
+          </div>
+
+      </div>
+
+	  </div>
+
+    <!-- Library & JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/ng-infinite-scroll.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/playvid.js"></script>
+
+
+  </body>
+</html>

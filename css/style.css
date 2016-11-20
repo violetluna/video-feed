@@ -1,0 +1,38 @@
+body {
+	font-family: 'Titillium Web', sans-serif;
+}
+
+h1 {
+	text-align: center;
+	color:  #009999;
+	text-transform: uppercase;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+/* RESULTS */
+
+#results {
+	width: 60%;
+	padding: 30px;
+	margin: auto;
+}
+
+.card {
+	margin-top: 50px !important;
+	margin-bottom: 50px !important;
+
+}
+
+.name {
+	background-color: #009999;
+	color: white;
+	font-size: 18px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.video {
+	padding: 0 !important;
+}
+
